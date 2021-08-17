@@ -1,7 +1,14 @@
-let checker = (zName,status,salary) =>  {if( status === "Available" ) {return (`${zName}, My Salary Is ${salary}` || `Iam Not Avaialble`)};}
-   
-  //q2.b
-  // write code to call checker function with inputs to return 
 
+let checker = zName => {
 
-  console.log(checker("Ahmad","Available",5000)) // Ahmad, My salary Is 5000
+  return  (status) => {
+
+    return  (salary) => {
+
+      return status === "Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`; };
+
+  };
+
+}
+
+console.log(checker("Ahmad")("Available")("5000"))
